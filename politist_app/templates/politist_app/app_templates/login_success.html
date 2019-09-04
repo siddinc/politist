@@ -1,0 +1,14 @@
+{% extends 'politist_app/app_templates/base.html' %}
+{% load bootstrap4 %}
+
+    {% block content %}
+
+        <div class="container">
+            <h1>hello logged in</h1>
+            <form class="sample" method="POST">
+              {% csrf_token %}
+              <h4>{{git_username_form}} <input type="submit" class="button" value="Search"></h4>
+            </form>
+        </div>
+
+    {% endblock %}

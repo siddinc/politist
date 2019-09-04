@@ -1,0 +1,18 @@
+{% extends 'politist_app/app_templates/base.html' %}
+{% load bootstrap4 %}
+    
+    {% block content %}
+        <br>
+        <div class="container">
+            <div class="card mx-auto">
+              <div class="card-header text-center">
+                <h1 class="my-auto" id="x5">Logged Out</h1>
+              </div>
+              <div class="card-body text-center">
+                <p class="x5 my-auto display-5">You have been succesfully logged out! <i class="far fa-smile"></i></p>
+                <p class="x5 my-auto"><a href="{% url 'politist_app:login' %}">Visit again</a></p>
+              </div>
+            </div>
+          </div>
+
+    {% endblock %}

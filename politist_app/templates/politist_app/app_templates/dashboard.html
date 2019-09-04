@@ -1,0 +1,111 @@
+{% extends 'politist_app/app_templates/base.html' %}
+{% load bootstrap4 %}
+    
+    {% block content %}
+      <br>
+      <div class="container">
+        <div class="card mx-auto border-primary mb-3 x4">
+          <div class="card-header text-center">
+            <h1 class="my-auto" id="x4">Search Trending Topics</h1>
+          </div>
+          <div class="card-body x4">
+            <form method="POST">
+              {% csrf_token %}
+              <div class="input-group mb-3">
+              {{ form }}
+              <div class="input-group-append">
+              <button class="btn btn-success" type="submit">Search</button>
+              </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      <br>
+        
+      <div class="container-fluid">
+          <br />
+          <div class="card-deck">
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.0.urlToImage}}" alt="Card image cap" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.0.url}}"><h5 class="card-title">{{toi_list.articles.0.title}}</h5></a>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.1.urlToImage}}" alt="Card image cap" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.1.url}}"><h5 class="card-title">{{toi_list.articles.1.title}}</h5></a>
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.2.urlToImage}}" alt="Card image cap" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.2.url}}"><h5 class="card-title">{{toi_list.articles.2.title}}</h5></a>
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.3.urlToImage}}" alt="Card image cap" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.3.url}}"><h5 class="card-title">{{toi_list.articles.3.title}}</h5></a>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <br />
+    
+          <div class="card-deck">
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.4.urlToImage}}" alt="Card image cap" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.4.url}}"><h5 class="card-title">{{toi_list.articles.4.title}}</h5></a>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img class="card-img-top" src="{{toi_list.articles.6.urlToImage}}" alt="oops" />
+              <div class="card-body">
+                <a href="{{toi_list.articles.6.url}}"><h5 class="card-title">{{toi_list.articles.6.title}}</h5></a>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+    
+    
+          </div>
+          <br />
+        </div>
+    
+
+
+
+
+
+
+
+
+      <!-- <div class="container">
+        {% for item in toi_list.articles %}
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h5>
+            </div>
+          </div>
+          <br>
+          {% endfor %}
+      </div> -->
+    {% endblock %}

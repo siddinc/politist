@@ -1,0 +1,28 @@
+{% extends 'politist_app/app_templates/base.html' %}
+{% load bootstrap4 %}
+    
+    {% block content %}
+    <br>
+        <div class="container">
+            <ul style="list-style-type:none;">
+                {% for item in tweet_data.statuses %}
+                    <li>
+                        <div class="card mx-auto border-primary mb-3" style="width: 60rem;">
+                            
+                            <h5 class="card-title mx-auto x6">@{{ item.user.screen_name }}</h5>
+                            <hr>
+                            <div class="card-body">
+                                 <h5 class="card-title">{{ item.full_text }}</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">
+            <a class="nav-link" href="{% url 'politist_app:analytics' %}"><button type="button" class="btn btn-primary btn-block">Analyze <i class="fab fa-twitter tw"></i></button></a>
+        </div>
+
+    {% endblock %}

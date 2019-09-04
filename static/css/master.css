@@ -1,0 +1,28 @@
+body {
+    background-color: beige;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.x4 {
+    margin-bottom: 1px;
+}
+
+.x6 {
+    padding-top: 10px;
+}
+
+.v {
+    padding-top: 5px;
+}
+
+.tw {
+    padding-left: 10px;
+}
+
+.me {
+    font-size: 1.5em;
+}
+
+.lo {
+    font-size: 1.5em;
+}
